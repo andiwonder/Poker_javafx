@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.scene.shape.Circle?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+          prefWidth="900.0" id="pane" stylesheets="@styles.css" gridLinesVisible="true"
+          style="-fx-background-size: cover; -fx-background-position: center center; -fx-background-repeat: no-repeat;"
+          xmlns:fx="http://javafx.com/fxml">
+    <columnConstraints>
+        <ColumnConstraints hgrow="NEVER" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <children>
+        <ImageView fitHeight="450.0" fitWidth="720.0" pickOnBounds="true" GridPane.columnIndex="1"
+                   GridPane.columnSpan="8" GridPane.rowIndex="5" GridPane.rowSpan="7">
+            <image>
+                <Image url="@table.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="78.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="5"
+                   GridPane.rowIndex="10">
+            <image>
+                <Image url="@nametagright.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="78.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8"
+                   GridPane.rowIndex="5">
+            <image>
+                <Image url="@nametagright.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="78.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1"
+                   GridPane.rowIndex="5">
+            <image>
+                <Image url="@nametagleft.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="78.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="8"
+                   GridPane.rowIndex="8">
+            <image>
+                <Image url="@nametagright.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="78.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1"
+                   GridPane.rowIndex="8">
+            <image>
+                <Image url="@nametagleft.png"/>
+            </image>
+        </ImageView>
+    </children>
+</GridPane>
