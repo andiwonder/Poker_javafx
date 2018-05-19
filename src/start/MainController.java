@@ -11,9 +11,9 @@ public class MainController {
 
     @FXML private Circle avatarCircle;
 
-    @FXML private Rectangle cardone;
-    @FXML private Rectangle cardtwo;
-    @FXML private Rectangle cardthree;
+    @FXML private Rectangle card1;
+    @FXML private Rectangle card2;
+    @FXML private Rectangle card3;
     @FXML private Rectangle card4;
     @FXML private Rectangle card5;
 
@@ -21,11 +21,11 @@ public class MainController {
     @FXML
     public void initialize() {
         Image img = new Image("1.png");
-        cardone.setFill(new ImagePattern(img));
-        Image imgtwo = new Image("13.png");
-        cardtwo.setFill(new ImagePattern(imgtwo));
-        Image imgthree = new Image("6.png");
-        cardthree.setFill(new ImagePattern(imgthree));
+        card1.setFill(new ImagePattern(img));
+        Image img2 = new Image("13.png");
+        card2.setFill(new ImagePattern(img2));
+        Image img3 = new Image("6.png");
+        card3.setFill(new ImagePattern(img3));
         Image img4 = new Image("22.png");
         card4.setFill(new ImagePattern(img4));
         Image img5 = new Image("42.png");
