@@ -24,4 +24,11 @@ public enum Rank {
     public int getRankValue(){
         return this.rankValue;
     }
+
+    public static Rank get(int code) {
+        for(Rank rank : values()) {
+            if(rank.getRankValue() == code) return rank;
+        }
+        return null;
+    }
 }

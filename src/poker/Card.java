@@ -11,21 +11,27 @@ public class Card implements Serializable, Comparable<Card> {
     private final Rank rank;
     private final Suit suit;
 
-    private final static Map<String, Card> CARD_CACHE = initCache();
+    private final static Map<String, Card> CARD_CACHE;
 
-    public Card(final Rank rank, final Suit suit){
-        this.rank = rank;
-        this.suit = suit;
-    }
-
-    private static Map<String, Card> initCache(){
+    // TODO do i really need this ?
+    static {
         final Map<String, Card> cache = new HashMap<>();
         for( final Suit suit: Suit.values()){
             for( final Rank rank: Rank.values()){
                 cache.put(cardKey(rank, suit), new Card(rank, suit));
             }
         }
-        return Collections.unmodifiableMap(cache);
+        CARD_CACHE = Collections.unmodifiableMap(cache);
+    }
+
+    public Card(final Rank rank, final Suit suit){
+        this.rank = rank;
+        this.suit = suit;
+    }
+
+    public Card(int rankValue, int suitValue){
+        this.rank = Rank.get(rankValue);
+        this.suit = Suit.get(suitValue);
     }
 
     private static String cardKey(final Rank rank, final Suit suit){
@@ -44,13 +50,17 @@ public class Card implements Serializable, Comparable<Card> {
         return this.rank;
     }
 
-    public Suit getSuit(){
-        return this.suit;
+    public int getSuit(){
+        return this.suit.getSuitValue();
+    }
+
+    public int getValue(){
+        return this.rank.getRankValue();
     }
 
     @Override
     public String toString() {
-        return this.rank + " of " + suit;
+        return getValue() + this.suit.getSuitChar();
     }
 
     @Override
@@ -71,10 +81,10 @@ public class Card implements Serializable, Comparable<Card> {
         return this.rank == card.rank && this.suit == card.suit;
     }
 
-    @Override
-    public int hashCode() {
-        int result = this.rank != null ? this.rank.hashCode() : 0;
-        result = 31 * result + (this.suit != null ? this.suit.hashCode() : 0);
-        return result;
-    }
+//    @Override
+//    public int hashCode() {
+//        int result = this.rank != null ? this.rank.hashCode() : 0;
+//        result = 31 * result + (this.suit != null ? this.suit.hashCode() : 0);
+//        return result;
+//    }
 }

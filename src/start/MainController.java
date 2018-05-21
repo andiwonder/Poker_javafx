@@ -1,6 +1,8 @@
 package start;
 
 import customControl.playerDisplay.PlayerDisplay;
+import customControl.bettingControl.BettingControl;
+
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
@@ -20,6 +22,8 @@ public class MainController {
     @FXML private Rectangle card5;
 
     @FXML private GridPane playergridpane;
+    @FXML private GridPane bettingpane;
+
 
 
     @FXML
@@ -45,6 +49,10 @@ public class MainController {
         playergridpane.getChildren().add(display_player_3);
         playergridpane.getChildren().add(display_player_4);
         playergridpane.getChildren().add(display_player_5);
+
+        BettingControl newControl = new BettingControl();
+        bettingpane.getChildren().add(newControl);
+
     }
 
 }

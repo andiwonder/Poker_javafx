@@ -2,6 +2,8 @@ package server;
 
 import poker.Card;
 import poker.Deck;
+import poker.util.Combination;
+import poker.util.PokerRank;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,6 +27,7 @@ public class Game {
         }
 
         for(ArrayList<Card> player: listOfPlayers){
+            System.out.println("------------Player dealt cards------------");
             System.out.println(player);
         }
 
@@ -32,20 +35,42 @@ public class Game {
             tableCards.add(newDeck.deal());
         }
 
+        ArrayList<Card> sevenCards = new ArrayList<>(player1Cards);
+        sevenCards.addAll(tableCards);
+
         newDeck.removeTwo();
 
+        System.out.println("-------Cards on table------------");
         System.out.println(tableCards);
+        System.out.println("---------Size of deck------------");
         System.out.println(newDeck.size());
 
-//        List<int []> testlist = new LinkedList<>();
-//        int combos = 5;
-//        int [] possibles = new int [] {1,2,3,4,5,6,7};
-//
-//        combinations(combos, possibles, testlist);
-//        for(int [] combo: testlist){
-//            System.out.println(Arrays.toString(combo));
-//        }
-//
-//        System.out.println(testlist.size());
+        ArrayList<ArrayList<Card>> allCardCombinations = new ArrayList<>();
+        for(int [] combos: Combination.getCombinations()){
+            ArrayList<Card> temp = new ArrayList<>();
+            for(int i= 0; i < combos.length; i++){
+                temp.add(sevenCards.get(combos[i]));
+            }
+            allCardCombinations.add(temp);
+        }
+
+
+//        System.out.println(allCardCombinations.size());
+        for(ArrayList<Card> oneSet: allCardCombinations){
+            PokerRank temp = new PokerRank(oneSet);
+            System.out.println("-------combo-----");
+            System.out.println(oneSet);
+            System.out.println("-------Rank------");
+            System.out.println(temp);
+        }
+
+//        PokerRank rank = new PokerRank(allCardCombinations.get(0));
+//        System.out.println("-------------TESTING HAND---------");
+//        System.out.println(allCardCombinations.get(0));
+//        System.out.println("-------------RANK-----------------®");
+//        System.out.println(rank);
+
+
+
     }
 }
