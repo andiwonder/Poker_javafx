@@ -1,7 +1,9 @@
 package start;
 
+import customControl.playerDisplay.PlayerDisplay;
 import javafx.fxml.FXML;
 import javafx.scene.image.Image;
+import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
@@ -17,6 +19,8 @@ public class MainController {
     @FXML private Rectangle card4;
     @FXML private Rectangle card5;
 
+    @FXML private GridPane playergridpane;
+
 
     @FXML
     public void initialize() {
@@ -30,5 +34,17 @@ public class MainController {
         card4.setFill(new ImagePattern(img4));
         Image img5 = new Image("42.png");
         card5.setFill(new ImagePattern(img5));
+
+        PlayerDisplay display_player_1 = new PlayerDisplay("1");
+        PlayerDisplay display_player_2 = new PlayerDisplay("2");
+        PlayerDisplay display_player_3 = new PlayerDisplay("3");
+        PlayerDisplay display_player_4 = new PlayerDisplay("4");
+        PlayerDisplay display_player_5 = new PlayerDisplay("5");
+        playergridpane.getChildren().add(display_player_1);
+        playergridpane.getChildren().add(display_player_2);
+        playergridpane.getChildren().add(display_player_3);
+        playergridpane.getChildren().add(display_player_4);
+        playergridpane.getChildren().add(display_player_5);
     }
+
 }

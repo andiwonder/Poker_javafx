@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.shape.Rectangle?>
+
+<fx:root type="javafx.scene.layout.StackPane"
+         xmlns:fx="http://javafx.com/fxml"
+         alignment="BOTTOM_CENTER" prefHeight="150.0" prefWidth="200.0"
+         GridPane.columnIndex="1" GridPane.rowIndex="3">
+    <children>
+        <HBox alignment="CENTER"
+              maxHeight="78.0" maxWidth="112.0" spacing="2.0"
+              minHeight="78.0" minWidth="112.0"
+              prefHeight="78.0" prefWidth="112.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0"
+                           fill="DODGERBLUE" stroke="BLACK" strokeType="INSIDE"
+                           height="68.0" width="51.0" />
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" stroke="BLACK" strokeType="INSIDE"
+                           height="68.0" width="51.0" />
+            </children>
+            <StackPane.margin>
+                <Insets bottom="25.0" />
+            </StackPane.margin>
+        </HBox>
+        <HBox alignment="BOTTOM_CENTER"
+              maxHeight="60.0" maxWidth="180.0"
+              minWidth="180.0" minHeight="60.0"
+              prefWidth="180.0" prefHeight="60.0"
+              style="-fx-background-color: rgb(20,20,29); -fx-border-radius: 50; -fx-background-radius: 50;">
+            <padding>
+                <Insets bottom="5.0" />
+            </padding>
+            <children>
+                <ImageView fitHeight="87.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" fx:id="useremoji">
+                    <HBox.margin>
+                        <Insets bottom="-15.0" left="-15.0" />
+                    </HBox.margin>
+                </ImageView>
+                <VBox alignment="BOTTOM_RIGHT" prefHeight="62.0" prefWidth="100.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Player5" textFill="WHITE"
+                               prefHeight="28.0" prefWidth="101.0">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                            <padding>
+                                <Insets top="5.0" />
+                            </padding>
+                        </Label>
+                        <Separator opacity="0.3" prefWidth="200.0" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="\$208" textFill="#4bab35"
+                               prefHeight="28.0" prefWidth="100.0">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</fx:root>

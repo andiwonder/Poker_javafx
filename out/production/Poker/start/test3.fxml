@@ -25,7 +25,7 @@
                 <Image url="@table.png"/>
             </image>
         </ImageView>
-        <GridPane>
+        <GridPane fx:id="player_display_gridpane">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>

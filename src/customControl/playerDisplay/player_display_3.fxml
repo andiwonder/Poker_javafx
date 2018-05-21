@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.image.ImageView?>
+
+<fx:root type="javafx.scene.layout.StackPane"
+         xmlns:fx="http://javafx.com/fxml"
+         prefHeight="150.0" prefWidth="200.0"
+         GridPane.columnIndex="2" GridPane.rowIndex="2">
+    <children>
+        <HBox alignment="CENTER" maxHeight="78.0" maxWidth="112.0" minHeight="78.0" minWidth="112.0"
+              prefHeight="78.0" prefWidth="112.0" spacing="2.0" StackPane.alignment="BOTTOM_RIGHT">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="68.0" stroke="BLACK"
+                           strokeType="INSIDE" width="51.0"/>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="68.0" stroke="BLACK"
+                           strokeType="INSIDE" width="51.0"/>
+            </children>
+            <StackPane.margin>
+                <Insets bottom="25.0" right="41.0"/>
+            </StackPane.margin>
+        </HBox>
+        <HBox alignment="BOTTOM_CENTER" maxHeight="60.0" maxWidth="180.0" minHeight="60.0"
+              minWidth="180.0" prefHeight="60.0" prefWidth="180.0"
+              style="-fx-background-color: rgb(20,20,20); -fx-border-radius: 50; -fx-background-radius: 50;"
+              StackPane.alignment="BOTTOM_RIGHT">
+            <padding>
+                <Insets bottom="5.0"/>
+            </padding>
+            <children>
+                <ImageView fitHeight="87.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" fx:id="useremoji">
+                    <HBox.margin>
+                        <Insets bottom="-15.0" left="-15.0"/>
+                    </HBox.margin>
+                </ImageView>
+                <VBox alignment="BOTTOM_RIGHT" prefHeight="62.0" prefWidth="100.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0"
+                               prefWidth="101.0" text="Player5" textFill="WHITE">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                            <padding>
+                                <Insets top="5.0"/>
+                            </padding>
+                        </Label>
+                        <Separator prefWidth="200.0"/>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="28.0"
+                               prefWidth="100.0" text="\$208" textFill="#4bab35">
+                            <font>
+                                <Font size="18.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children>
+            <StackPane.margin>
+                <Insets right="25.0"/>
+            </StackPane.margin>
+        </HBox>
+    </children>
+</fx:root>
