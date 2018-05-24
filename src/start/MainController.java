@@ -50,8 +50,8 @@ public class MainController {
         playergridpane.getChildren().add(display_player_4);
         playergridpane.getChildren().add(display_player_5);
 
-        BettingControl newControl = new BettingControl();
-        bettingpane.getChildren().add(newControl);
+//        BettingControl newControl = new BettingControl();
+//        bettingpane.getChildren().add(newControl);
 
     }
 

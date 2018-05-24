@@ -10,7 +10,8 @@
 <?import javafx.scene.layout.VBox?>
 
 <fx:root type="javafx.scene.layout.StackPane"
-         maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+         maxHeight="-Infinity" maxWidth="-Infinity"
+         minHeight="-Infinity" minWidth="-Infinity"
          prefHeight="82.0" prefWidth="367.0" xmlns:fx="http://javafx.com/fxml" >
     <children>
         <VBox prefHeight="105.0" prefWidth="369.0">
@@ -45,4 +46,7 @@
             </children>
         </VBox>
     </children>
+    <padding>
+        <Insets left="10.0"/>
+    </padding>
 </fx:root>
